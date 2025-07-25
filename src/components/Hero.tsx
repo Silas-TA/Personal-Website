@@ -16,9 +16,6 @@ const Hero = () => {
             <p className="text-2xl sm:text-3xl lg:text-4xl text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-primary-200 font-bold">
               Data Scientist & ML Engineer
             </p>
-            <p className="text-sm text-blue-200 italic">
-              (yes, it's quite a journey!)
-            </p>
           </div>
 
           {/* Bottom - Image with Description Left and Links Right */}
