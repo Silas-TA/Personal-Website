@@ -1,13 +1,25 @@
-import React from 'react';
-import { ChevronDown, Github, Linkedin, Mail } from 'lucide-react';
+import React from "react";
+import { ChevronDown, Github, Linkedin, Mail } from "lucide-react";
 
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-900 via-primary-800 to-blue-900">
       <div className="absolute inset-0 bg-black/20"></div>
-      
+
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="space-y-8">
+          {/* Profile Photo */}
+          <div className="flex justify-center mb-8">
+            <div className="relative">
+              <img
+                src="/silas.jpeg"
+                alt="Silas Taiwo-Adeyemo"
+                className="w-32 h-32 sm:w-40 sm:h-40 lg:w-48 lg:h-48 rounded-full object-cover border-4 border-white/20 shadow-2xl"
+              />
+              <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-primary-500/20 to-blue-500/20"></div>
+            </div>
+          </div>
+
           <div className="space-y-4">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
               Silas Taiwo-Adeyemo
@@ -16,14 +28,17 @@ const Hero = () => {
               </span>
             </h1>
             <p className="text-xl sm:text-2xl text-blue-100 max-w-2xl mx-auto">
-              Business Informatics graduate with 1+ years of experience in data science and machine learning
+              Business Informatics graduate with 1+ years of experience in data
+              science and machine learning
             </p>
           </div>
 
           <div className="space-y-6">
             <p className="text-lg text-blue-50 max-w-3xl mx-auto leading-relaxed">
-              Skilled in developing data-driven decision solutions using Python, SQL, and data visualization techniques, 
-              with a proven ability to analyze complex data and present actionable insights to stakeholders.
+              Skilled in developing data-driven decision solutions using Python,
+              SQL, and data visualization techniques, with a proven ability to
+              analyze complex data and present actionable insights to
+              stakeholders.
             </p>
 
             <div className="flex justify-center space-x-6">
@@ -70,7 +85,10 @@ const Hero = () => {
       </div>
 
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <a href="#about" className="text-white/80 hover:text-white transition-colors duration-300">
+        <a
+          href="#about"
+          className="text-white/80 hover:text-white transition-colors duration-300"
+        >
           <ChevronDown size={32} />
         </a>
       </div>
