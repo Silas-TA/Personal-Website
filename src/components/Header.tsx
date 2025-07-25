@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import React, { useState, useEffect } from "react";
+import { Menu, X } from "lucide-react";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -10,29 +10,32 @@ const Header = () => {
       setIsScrolled(window.scrollY > 50);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const menuItems = [
-    { href: '#about', label: 'About' },
-    { href: '#education', label: 'Education' },
-    { href: '#experience', label: 'Experience' },
-    { href: '#skills', label: 'Skills' },
-    { href: '#projects', label: 'Projects' },
-    { href: '#contact', label: 'Contact' },
+    { href: "#about", label: "About" },
+    { href: "#education", label: "Education" },
+    { href: "#skills", label: "Skills" },
+    { href: "#projects", label: "Projects" },
+    { href: "#contact", label: "Contact" },
   ];
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-white/95 backdrop-blur-sm shadow-sm' : 'bg-transparent'
-    }`}>
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled ? "bg-white/95 backdrop-blur-sm shadow-sm" : "bg-transparent"
+      }`}
+    >
       <nav className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <div className="flex-shrink-0">
-            <h1 className={`text-xl font-bold transition-colors duration-300 ${
-              isScrolled ? 'text-gray-900' : 'text-white'
-            }`}>
+            <h1
+              className={`text-xl font-bold transition-colors duration-300 ${
+                isScrolled ? "text-gray-900" : "text-white"
+              }`}
+            >
               Silas Taiwo-Adeyemo
             </h1>
           </div>
@@ -45,7 +48,9 @@ const Header = () => {
                   key={item.href}
                   href={item.href}
                   className={`px-3 py-2 text-sm font-medium transition-colors duration-300 hover:text-primary-600 ${
-                    isScrolled ? 'text-gray-900' : 'text-white/90 hover:text-white'
+                    isScrolled
+                      ? "text-gray-900"
+                      : "text-white/90 hover:text-white"
                   }`}
                 >
                   {item.label}
@@ -59,7 +64,9 @@ const Header = () => {
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className={`p-2 rounded-md transition-colors duration-300 ${
-                isScrolled ? 'text-gray-900 hover:text-gray-700' : 'text-white hover:text-white/80'
+                isScrolled
+                  ? "text-gray-900 hover:text-gray-700"
+                  : "text-white hover:text-white/80"
               }`}
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
