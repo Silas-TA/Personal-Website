@@ -55,7 +55,7 @@ const Experience = () => {
       title: "Waiter | Kitchen Prep",
       company: "Woodway County Club",
       location: "CT, USA",
-      period: "06/2023 - 09/2024",
+      period: "06/2023 - 09/2023",
       type: "Part-time",
       description:
         "Provided exceptional customer service in a hospitality environment while managing financial transactions and maintaining high service standards",
