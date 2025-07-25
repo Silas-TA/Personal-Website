@@ -34,7 +34,7 @@ const Header = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-white/80 backdrop-blur-md shadow-lg border-b border-white/20"
+          ? "bg-white/10 backdrop-blur-xl shadow-2xl border-b border-white/30"
           : "bg-transparent"
       }`}
     >
@@ -89,13 +89,13 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden bg-white/90 backdrop-blur-md border-t border-white/20">
+          <div className="md:hidden bg-white/10 backdrop-blur-xl border-t border-white/30 shadow-2xl">
             <div className="px-2 pt-2 pb-3 space-y-1">
               {menuItems.map((item) => (
                 <a
                   key={item.href}
                   href={item.href}
-                  className="block px-3 py-2 text-base font-medium text-gray-900 hover:text-primary-600 hover:bg-white/50 rounded-md transition-colors duration-200"
+                  className="block px-3 py-2 text-base font-medium text-gray-900 hover:text-primary-600 hover:bg-white/20 rounded-md transition-colors duration-200"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.label}
