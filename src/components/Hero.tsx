@@ -1,0 +1,81 @@
+import React from 'react';
+import { ChevronDown, Github, Linkedin, Mail } from 'lucide-react';
+
+const Hero = () => {
+  return (
+    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-900 via-primary-800 to-blue-900">
+      <div className="absolute inset-0 bg-black/20"></div>
+      
+      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="space-y-8">
+          <div className="space-y-4">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
+              Silas Taiwo-Adeyemo
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-primary-200">
+                Data Scientist & ML Engineer
+              </span>
+            </h1>
+            <p className="text-xl sm:text-2xl text-blue-100 max-w-2xl mx-auto">
+              Business Informatics graduate with 1+ years of experience in data science and machine learning
+            </p>
+          </div>
+
+          <div className="space-y-6">
+            <p className="text-lg text-blue-50 max-w-3xl mx-auto leading-relaxed">
+              Skilled in developing data-driven decision solutions using Python, SQL, and data visualization techniques, 
+              with a proven ability to analyze complex data and present actionable insights to stakeholders.
+            </p>
+
+            <div className="flex justify-center space-x-6">
+              <a
+                href="#contact"
+                className="inline-flex items-center px-8 py-3 bg-primary-600 hover:bg-primary-700 text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+              >
+                Get In Touch
+              </a>
+              <a
+                href="#projects"
+                className="inline-flex items-center px-8 py-3 bg-transparent border-2 border-white text-white hover:bg-white hover:text-primary-900 font-medium rounded-lg transition-all duration-300 transform hover:scale-105"
+              >
+                View Projects
+              </a>
+            </div>
+
+            <div className="flex justify-center space-x-6 pt-4">
+              <a
+                href="https://github.com/Silas-TA"
+                className="p-3 bg-white/10 hover:bg-white/20 text-white rounded-full transition-all duration-300 transform hover:scale-110"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Github size={24} />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/silas-taiwo-adeyemo-105a5023a/"
+                className="p-3 bg-white/10 hover:bg-white/20 text-white rounded-full transition-all duration-300 transform hover:scale-110"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Linkedin size={24} />
+              </a>
+              <a
+                href="mailto:taiwoadeyemosilas@gmail.com"
+                className="p-3 bg-white/10 hover:bg-white/20 text-white rounded-full transition-all duration-300 transform hover:scale-110"
+              >
+                <Mail size={24} />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <a href="#about" className="text-white/80 hover:text-white transition-colors duration-300">
+          <ChevronDown size={32} />
+        </a>
+      </div>
+    </section>
+  );
+};
+
+export default Hero;
