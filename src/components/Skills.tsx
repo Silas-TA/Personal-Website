@@ -211,20 +211,6 @@ const Skills = () => {
             </div>
           </div>
         </div>
-
-        {/* ML Engineer Meme */}
-        <div className="mt-16 text-center">
-          <div className="max-w-md mx-auto">
-            <img
-              src="/ml_engineer.jpeg"
-              alt="ML Engineer Meme"
-              className="rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
-            />
-            <p className="mt-4 text-gray-600 italic text-sm">
-              How it feels to be an ML Engineer 😄
-            </p>
-          </div>
-        </div>
       </div>
     </section>
   );

@@ -114,6 +114,17 @@ const Projects = () => {
           </p>
         </div>
 
+        {/* ML Engineer Meme */}
+        <div className="text-center mb-12">
+          <div className="max-w-md mx-auto">
+            <img
+              src="/ml_engineer.jpeg"
+              alt="ML Engineer Meme"
+              className="rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+            />
+          </div>
+        </div>
+
         <div className="grid lg:grid-cols-2 gap-8">
           {projects.map((project, index) => (
             <div
