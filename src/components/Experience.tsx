@@ -1,208 +1,186 @@
 import React from "react";
-import { Github, ExternalLink, Play } from "lucide-react";
+import { Briefcase, Calendar, MapPin, Award } from "lucide-react";
 
-const Projects = () => {
-  const projects = [
+const Experience = () => {
+  const experiences = [
     {
-      title: "Housing Price Prediction Model",
+      title: "Membership Analyst",
+      company:
+        "Blue Cross Blue Shield of Michigan | Strategic Staffing Solution",
+      location: "Kaunas, Kaunas",
+      period: "11/2023 - Current",
+      type: "Full-time",
       description:
-        "Developed a housing price prediction model for a Kaggle challenge using XGBoost algorithm, achieving an impressive RMSE score of 0.14.",
-      image:
-        "https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=800",
-      technologies: ["Python", "XGBoost", "Pandas", "NumPy", "Scikit-learn"],
-      features: [
-        "RMSE score of 0.14 on Kaggle challenge",
-        "Hyperparameter tuning and model optimization",
-        "Comprehensive model evaluation and validation",
+        "Managing customer contracts, pricing structures, and service agreements while providing account management support",
+      achievements: [
+        "Managed customer contracts, pricing structures, and service agreements to support seamless partner operations",
+        "Provided account management support, maintaining a 98% monthly quality assurance rating",
+        "Performed financial reconciliations on invoices to ensure billing accuracy",
+        "Escalated high-priority cases and collaborated with cross-functional teams to resolve critical issues",
       ],
-      github:
-        "https://github.com/Silas-TA/Housing-Price-Prediction-using-XGBoost",
-      demo: "https://github.com/Silas-TA/Housing-Price-Prediction-using-XGBoost",
-      status: "Completed",
+      technologies: [
+        "Account Management",
+        "Financial Reconciliation",
+        "Quality Assurance",
+        "Contract Management",
+        "Cross-functional Collaboration",
+      ],
     },
     {
-      title: "Article Clustering and Text Analysis",
+      title: "Business Intelligence Analyst",
+      company: "Agrovinica",
+      location: "Budapest, HU",
+      period: "02/2025 - 06/2025",
+      type: "Full-time",
       description:
-        "Built a comprehensive customer segmentation model using machine learning techniques to identify distinct customer groups and optimize marketing strategies.",
-      image:
-        "https://images.pexels.com/photos/1591062/pexels-photo-1591062.jpeg?auto=compress&cs=tinysrgb&w=800",
+        "Developing business intelligence solutions using NLP, customer segmentation, and web scraping technologies",
+      achievements: [
+        "Preprocessed a large article corpus using lemmatization and NLP libraries (e.g., NLTK) to extract keywords for a Google Ads campaign",
+        "Performed customer segmentation in Google Analytics 4 to identify distinct customer groups",
+        "Applied hierarchical clustering to define customer segments based on GA4 data",
+        "Developed a web scraping tool with AI assistance (e.g., Claude) to automate data collection",
+        "Prepared reports and presentations using Microsoft Office Suite",
+      ],
       technologies: [
-        "Python",
+        "NLP",
         "NLTK",
-        "K-means",
+        "Google Analytics 4",
         "Hierarchical Clustering",
-        "Scikit-learn",
-        "Pandas",
+        "Web Scraping",
+        "AI Tools",
+        "Microsoft Office Suite",
       ],
-      features: [
-        "Processed over 3,000 articles using NLTK preprocessing",
-        "Applied hierarchical and k-means clustering for topic grouping",
-        "Discovered topic variance across article dataset",
-        "Extracted popular keywords for SEO optimization strategies",
-      ],
-      github: "https://github.com/Silas-TA/Blog-Post-Analysis",
-      demo: "https://github.com/Silas-TA",
-      status: "Completed",
     },
     {
-      title: "Twitter Sentiment Analysis",
+      title: "Waiter | Kitchen Prep",
+      company: "Woodway County Club",
+      location: "CT, USA",
+      period: "06/2023 - 09/2024",
+      type: "Part-time",
       description:
-        "Real-time Twitter sentiment analysis application with both command-line and GUI interfaces, using Twitter API v2 to analyze public sentiment on any keyword or handle.",
-      image:
-        "https://images.pexels.com/photos/2599244/pexels-photo-2599244.jpeg?auto=compress&cs=tinysrgb&w=800",
+        "Provided exceptional customer service in a hospitality environment while managing financial transactions and maintaining high service standards",
+      achievements: [
+        "Demonstrated exceptional customer service skills in a hospitality environment",
+        "Managed financial transactions, including payment processing, change counting, and receipt issuance",
+        "Maintained high standards of food safety and sanitation during food and drink preparation",
+        "Prepared dining areas and maintained cleanliness to meet high-quality service standards",
+      ],
       technologies: [
-        "Python",
-        "Tweepy",
-        "TextBlob",
-        "Tkinter",
-        "Twitter API v2",
-        "Natural Language Processing",
+        "Customer Service",
+        "Financial Transactions",
+        "Food Safety",
+        "Hospitality Management",
+        "Payment Processing",
       ],
-      features: [
-        "Real-time Twitter data retrieval using Twitter API v2",
-        "Dual interfaces: command-line and GUI applications",
-        "Text preprocessing and cleaning with regex patterns",
-        "Sentiment classification with percentage breakdown",
-        "Sample tweet display for each sentiment category",
-        "Secure API key management with environment variables",
-      ],
-      github: "https://github.com/Silas-TA/Twitter-Sentiment",
-      demo: "https://github.com/Silas-TA/Twitter-Sentiment",
-      status: "Completed",
-    },
-    {
-      title: "Student Performance Prediction",
-      description:
-        "Developed a simple linear regression model to determine student performance based on key metrics including study hours, previous scores, and extracurricular activities.",
-      image:
-        "https://images.pexels.com/photos/7567486/pexels-photo-7567486.jpeg?auto=compress&cs=tinysrgb&w=800",
-      technologies: [
-        "Python",
-        "Scikit-learn",
-        "Linear Regression",
-        "Pandas",
-        "Matplotlib",
-      ],
-      features: [
-        "Linear regression model implementation",
-        "Multiple feature analysis (study hours, scores, activities)",
-        "Performance prediction and evaluation",
-        "Data visualization and insights",
-      ],
-      github: "https://github.com/Silas-TA",
-      demo: "https://github.com/Silas-TA",
-      status: "Completed",
     },
   ];
 
   return (
-    <section id="projects" className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="experience" className="py-20 bg-white">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-            Featured Projects
+            Professional Experience
           </h2>
           <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-            A showcase of machine learning projects demonstrating practical
-            application of AI techniques
-          </p>
-          <p className="text-primary-600 mt-2">
-            <em>
-              GitHub repository links will be added once projects are made
-              public
-            </em>
+            1+ years of experience in data science, business intelligence, and
+            analytics across healthcare and agricultural sectors
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8">
-          {projects.map((project, index) => (
+        <div className="space-y-8">
+          {experiences.map((exp, index) => (
             <div
               key={index}
-              className="bg-gray-50 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 overflow-hidden"
+              className="bg-gray-50 rounded-2xl p-8 shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
             >
-              <div className="relative">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-48 object-cover"
-                />
-                <div className="absolute top-4 right-4">
-                  <span
-                    className={`px-3 py-1 text-xs font-medium rounded-full ${
-                      project.status === "Completed"
-                        ? "bg-green-100 text-green-800"
-                        : "bg-orange-100 text-orange-800"
-                    }`}
-                  >
-                    {project.status}
-                  </span>
+              <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-6">
+                <div className="flex-1">
+                  <div className="flex items-center space-x-3 mb-2">
+                    <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center">
+                      <Briefcase className="w-6 h-6 text-primary-600" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-gray-900">
+                        {exp.title}
+                      </h3>
+                      <p className="text-lg text-primary-600 font-medium">
+                        {exp.company}
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex flex-wrap items-center gap-4 text-gray-600 mb-4">
+                    <div className="flex items-center space-x-1">
+                      <MapPin className="w-4 h-4" />
+                      <span>{exp.location}</span>
+                    </div>
+                    <div className="flex items-center space-x-1">
+                      <Calendar className="w-4 h-4" />
+                      <span>{exp.period}</span>
+                    </div>
+                    <span className="px-3 py-1 bg-green-100 text-green-800 text-sm font-medium rounded-full">
+                      {exp.type}
+                    </span>
+                  </div>
                 </div>
               </div>
 
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  {project.title}
-                </h3>
-                <p className="text-gray-700 mb-4 leading-relaxed">
-                  {project.description}
-                </p>
+              <p className="text-gray-700 mb-6 leading-relaxed">
+                {exp.description}
+              </p>
 
-                <div className="mb-4">
-                  <h4 className="text-sm font-semibold text-gray-900 mb-2">
-                    Key Features:
-                  </h4>
-                  <ul className="space-y-1">
-                    {project.features.map((feature, featureIndex) => (
-                      <li
-                        key={featureIndex}
-                        className="flex items-start space-x-2"
-                      >
-                        <div className="w-1.5 h-1.5 bg-primary-600 rounded-full mt-2 flex-shrink-0"></div>
-                        <span className="text-sm text-gray-700">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+              <div className="mb-6">
+                <h4 className="text-lg font-semibold text-gray-900 mb-3 flex items-center">
+                  <Award className="w-5 h-5 text-primary-600 mr-2" />
+                  Key Achievements
+                </h4>
+                <ul className="space-y-2">
+                  {exp.achievements.map((achievement, achievementIndex) => (
+                    <li
+                      key={achievementIndex}
+                      className="flex items-start space-x-3"
+                    >
+                      <div className="w-2 h-2 bg-primary-600 rounded-full mt-2 flex-shrink-0"></div>
+                      <span className="text-gray-700">{achievement}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
 
-                <div className="mb-6">
-                  <div className="flex flex-wrap gap-2">
-                    {project.technologies.map((tech, techIndex) => (
-                      <span
-                        key={techIndex}
-                        className="px-3 py-1 bg-primary-100 text-primary-800 text-xs font-medium rounded-full"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-
-                <div className="flex space-x-4">
-                  <a
-                    href={project.github}
-                    className="flex items-center space-x-2 px-4 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors duration-200 text-sm font-medium"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Github size={16} />
-                    <span>Code</span>
-                  </a>
+              <div>
+                <h4 className="text-sm font-semibold text-gray-900 mb-3">
+                  Technologies & Skills
+                </h4>
+                <div className="flex flex-wrap gap-2">
+                  {exp.technologies.map((tech, techIndex) => (
+                    <span
+                      key={techIndex}
+                      className="px-3 py-1 bg-primary-100 text-primary-800 text-sm font-medium rounded-full"
+                    >
+                      {tech}
+                    </span>
+                  ))}
                 </div>
               </div>
             </div>
           ))}
         </div>
 
-        <div className="text-center mt-12">
+        <div className="mt-12 bg-primary-50 rounded-2xl p-8 text-center">
+          <h3 className="text-2xl font-bold text-gray-900 mb-4">
+            Ready for New Opportunities
+          </h3>
+          <p className="text-gray-700 mb-6 max-w-2xl mx-auto">
+            I'm actively seeking opportunities to leverage my data science and
+            analytics expertise in challenging roles where I can contribute to
+            meaningful projects and continue growing professionally.
+          </p>
           <a
-            href="https://github.com/Silas-TA"
-            className="inline-flex items-center space-x-2 px-8 py-3 bg-gray-900 text-white font-medium rounded-lg hover:bg-gray-800 transition-all duration-300 transform hover:scale-105"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#contact"
+            className="inline-flex items-center px-8 py-3 bg-primary-600 text-white font-medium rounded-lg hover:bg-primary-700 transition-all duration-300 transform hover:scale-105"
           >
-            <Github size={20} />
-            <span>View All Projects on GitHub</span>
-            <ExternalLink size={16} />
+            Get In Touch
           </a>
         </div>
       </div>
@@ -210,4 +188,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default Experience;
