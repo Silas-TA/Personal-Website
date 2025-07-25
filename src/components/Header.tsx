@@ -23,18 +23,30 @@ const Header = () => {
     { href: "#contact", label: "Contact" },
   ];
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-white/95 backdrop-blur-sm shadow-sm" : "bg-transparent"
+        isScrolled
+          ? "bg-white/80 backdrop-blur-md shadow-lg border-b border-white/20"
+          : "bg-transparent"
       }`}
     >
       <nav className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <div className="flex-shrink-0">
             <h1
-              className={`text-xl font-bold transition-colors duration-300 ${
-                isScrolled ? "text-gray-900" : "text-white"
+              onClick={scrollToTop}
+              className={`text-xl font-bold transition-all duration-300 cursor-pointer hover:scale-105 ${
+                isScrolled
+                  ? "text-gray-900 hover:text-primary-600"
+                  : "text-white hover:text-blue-200"
               }`}
             >
               Silas Taiwo-Adeyemo
@@ -77,13 +89,13 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden bg-white border-t border-gray-200">
+          <div className="md:hidden bg-white/90 backdrop-blur-md border-t border-white/20">
             <div className="px-2 pt-2 pb-3 space-y-1">
               {menuItems.map((item) => (
                 <a
                   key={item.href}
                   href={item.href}
-                  className="block px-3 py-2 text-base font-medium text-gray-900 hover:text-primary-600 hover:bg-gray-50 rounded-md transition-colors duration-200"
+                  className="block px-3 py-2 text-base font-medium text-gray-900 hover:text-primary-600 hover:bg-white/50 rounded-md transition-colors duration-200"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.label}
