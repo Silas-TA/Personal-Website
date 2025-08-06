@@ -1,5 +1,5 @@
-import React from 'react';
-import { GraduationCap, Award, BookOpen } from 'lucide-react';
+import React from "react";
+import { GraduationCap, Award, BookOpen } from "lucide-react";
 
 const Education = () => {
   const education = [
@@ -16,9 +16,9 @@ const Education = () => {
         "Database Systems",
         "Statistical Analysis",
         "Information Systems",
-        "Business Intelligence"
+        "Business Intelligence",
       ],
-      thesis: ""
+      thesis: "",
     },
     {
       degree: "Joint Program in Data Science",
@@ -33,17 +33,14 @@ const Education = () => {
         "Machine Learning (Supervised & Unsupervised)",
         "Data Visualization",
         "Decision Trees & Neural Networks",
-        "Analytics & Insights"
+        "Analytics & Insights",
       ],
-      thesis: ""
-    }
+      thesis: "",
+    },
   ];
 
   const certifications = [
-    "Data Science Specialization - Transform 4 Europe",
-    "Business Intelligence & Analytics",
-    "Google Analytics 4 Certified",
-    "IBM SPSS Statistics"
+    "Data Science Fundamentals - Transform4Europe Program (University of Silesia & Vytautas Magnus University)",
   ];
 
   return (
@@ -54,13 +51,17 @@ const Education = () => {
             Education
           </h2>
           <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-            Strong academic foundation in computer science with specialized focus on machine learning and AI
+            Strong academic foundation in computer science with specialized
+            focus on machine learning and AI
           </p>
         </div>
 
         <div className="space-y-8 mb-16">
           {education.map((edu, index) => (
-            <div key={index} className="bg-white rounded-2xl p-8 shadow-md hover:shadow-lg transition-shadow duration-300">
+            <div
+              key={index}
+              className="bg-white rounded-2xl p-8 shadow-md hover:shadow-lg transition-shadow duration-300"
+            >
               <div className="flex items-start space-x-4">
                 <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center flex-shrink-0">
                   <GraduationCap className="w-6 h-6 text-primary-600" />
@@ -68,20 +69,29 @@ const Education = () => {
                 <div className="flex-1">
                   <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
                     <div>
-                      <h3 className="text-xl font-bold text-gray-900">{edu.degree}</h3>
-                      <p className="text-lg text-primary-600 font-medium">{edu.school}</p>
+                      <h3 className="text-xl font-bold text-gray-900">
+                        {edu.degree}
+                      </h3>
+                      <p className="text-lg text-primary-600 font-medium">
+                        {edu.school}
+                      </p>
                       <p className="text-gray-700">{edu.location}</p>
                     </div>
                     <div className="text-right">
                       <p className="text-gray-700 font-medium">{edu.period}</p>
-                      <p className="text-gray-900 font-semibold">GPA: {edu.gpa}</p>
+                      <p className="text-gray-900 font-semibold">
+                        GPA: {edu.gpa}
+                      </p>
                     </div>
                   </div>
 
                   {edu.specialization && (
                     <div className="mb-4">
                       <p className="text-gray-700 font-medium">
-                        Specialization: <span className="text-primary-600">{edu.specialization}</span>
+                        Specialization:{" "}
+                        <span className="text-primary-600">
+                          {edu.specialization}
+                        </span>
                       </p>
                     </div>
                   )}
@@ -94,7 +104,9 @@ const Education = () => {
                   )}
 
                   <div>
-                    <p className="text-gray-700 font-medium mb-2">Relevant Coursework:</p>
+                    <p className="text-gray-700 font-medium mb-2">
+                      Relevant Coursework:
+                    </p>
                     <div className="flex flex-wrap gap-2">
                       {edu.coursework.map((course, courseIndex) => (
                         <span
