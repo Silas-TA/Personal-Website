@@ -7,7 +7,7 @@ const Skills = () => {
       icon: Code,
       title: "Programming Languages",
       color: "blue",
-      skills: ["Python", "SQL", "R"],
+      skills: ["Python", "SQL", "Java"],
     },
     {
       icon: Brain,
@@ -37,6 +37,7 @@ const Skills = () => {
         "NLTK",
         "IBM SPSS Statistics",
         "Google Analytics 4",
+        "A/B Testing",
       ],
     },
     {
@@ -53,7 +54,7 @@ const Skills = () => {
     },
     {
       icon: Cloud,
-      title: "Technical Skills",
+      title: "Tools & Integration",
       color: "teal",
       skills: [
         "API Integration",
@@ -62,19 +63,6 @@ const Skills = () => {
         "BPMN",
         "Data Cleaning",
         "Database Management",
-      ],
-    },
-    {
-      icon: Cpu,
-      title: "Business Intelligence",
-      color: "orange",
-      skills: [
-        "Customer Segmentation",
-        "Financial Analysis",
-        "Quality Assurance",
-        "Stakeholder Reporting",
-        "Process Optimization",
-        "A/B Testing",
       ],
     },
   ];
