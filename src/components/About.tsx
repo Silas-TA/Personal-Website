@@ -1,28 +1,32 @@
-import React from 'react';
-import { Brain, Code, Database, TrendingUp } from 'lucide-react';
+import React from "react";
+import { Brain, Code, Database, TrendingUp } from "lucide-react";
 
 const About = () => {
   const highlights = [
     {
       icon: Brain,
-      title: 'AI/ML Expertise',
-      description: 'Deep understanding of machine learning algorithms, neural networks, and AI applications'
+      title: "AI/ML Expertise",
+      description:
+        "Deep understanding of machine learning algorithms, neural networks, and AI applications",
     },
     {
       icon: Code,
-      title: 'Technical Skills',
-      description: 'Proficient in Python, R, SQL with experience in modern ML frameworks and tools'
+      title: "Technical Skills",
+      description:
+        "Proficient in Python, R, SQL with experience in modern ML frameworks and tools",
     },
     {
       icon: Database,
-      title: 'Data Engineering',
-      description: 'Experience with data pipelines, ETL processes, and big data technologies'
+      title: "Data Manipulation",
+      description:
+        "Experience with data wrangling, preprocessing, and transformation techniques",
     },
     {
       icon: TrendingUp,
-      title: 'Problem Solving',
-      description: 'Analytical mindset with a passion for solving complex business problems with data'
-    }
+      title: "Problem Solving",
+      description:
+        "Analytical mindset with a passion for solving complex business problems with data",
+    },
   ];
 
   return (
@@ -33,8 +37,9 @@ const About = () => {
             About Me
           </h2>
           <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-            I'm a passionate machine learning engineer dedicated to creating intelligent solutions 
-            that make a positive impact on businesses and society.
+            I'm a passionate machine learning engineer dedicated to creating
+            intelligent solutions that make a positive impact on businesses and
+            society.
           </p>
         </div>
 
@@ -42,19 +47,24 @@ const About = () => {
           <div className="space-y-6">
             <div className="prose prose-lg text-gray-700">
               <p>
-                My journey into data science and machine learning began during my Business Informatics studies 
-                at Vytautas Magnus University, where I discovered the incredible potential of data-driven 
-                solutions to transform business operations and solve complex problems.
+                My journey into data science and machine learning began during
+                my Business Informatics studies at Vytautas Magnus University,
+                where I discovered the incredible potential of data-driven
+                solutions to transform business operations and solve complex
+                problems.
               </p>
               <p>
-                Through my experience as a Business Intelligence Analyst at Agrovinica and Membership Analyst 
-                at Blue Cross Blue Shield of Michigan, I've developed expertise in customer segmentation, 
-                NLP preprocessing, and financial data analysis, maintaining a 98% quality assurance rating.
+                Through my experience as a Business Intelligence Analyst at
+                Agrovinica and Membership Analyst at Blue Cross Blue Shield of
+                Michigan, I've developed expertise in customer segmentation, NLP
+                preprocessing, and financial data analysis, maintaining a 98%
+                quality assurance rating.
               </p>
               <p>
-                I specialize in supervised and unsupervised learning techniques, with hands-on experience 
-                in Python, SQL, and data visualization. My projects include housing price prediction models, 
-                customer segmentation analysis, and sentiment analysis systems.
+                I specialize in supervised and unsupervised learning techniques,
+                with hands-on experience in Python, SQL, and data visualization.
+                My projects include housing price prediction models, customer
+                segmentation analysis, and sentiment analysis systems.
               </p>
             </div>
           </div>
@@ -88,21 +98,30 @@ const About = () => {
           </h3>
           <div className="grid md:grid-cols-3 gap-8 text-center">
             <div>
-              <h4 className="text-lg font-semibold text-primary-600 mb-2">Growth Opportunities</h4>
+              <h4 className="text-lg font-semibold text-primary-600 mb-2">
+                Growth Opportunities
+              </h4>
               <p className="text-gray-700">
-                Seeking roles where I can expand my ML expertise while contributing to meaningful projects
+                Seeking roles where I can expand my ML expertise while
+                contributing to meaningful projects
               </p>
             </div>
             <div>
-              <h4 className="text-lg font-semibold text-primary-600 mb-2">Collaborative Environment</h4>
+              <h4 className="text-lg font-semibold text-primary-600 mb-2">
+                Collaborative Environment
+              </h4>
               <p className="text-gray-700">
-                Eager to work with talented teams that value innovation, learning, and knowledge sharing
+                Eager to work with talented teams that value innovation,
+                learning, and knowledge sharing
               </p>
             </div>
             <div>
-              <h4 className="text-lg font-semibold text-primary-600 mb-2">Real Impact</h4>
+              <h4 className="text-lg font-semibold text-primary-600 mb-2">
+                Real Impact
+              </h4>
               <p className="text-gray-700">
-                Passionate about building AI solutions that solve real problems and create value
+                Passionate about building AI solutions that solve real problems
+                and create value
               </p>
             </div>
           </div>
