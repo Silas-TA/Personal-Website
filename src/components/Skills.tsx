@@ -4,81 +4,77 @@ import { Code, Database, Cloud, BarChart3, Brain, Cpu } from "lucide-react";
 const Skills = () => {
   const skillCategories = [
     {
+      icon: Code,
+      title: "Programming Languages",
+      color: "blue",
+      skills: ["Python", "SQL", "R"],
+    },
+    {
       icon: Brain,
       title: "Machine Learning",
-      color: "blue",
-      skills: [
-        { name: "Supervised Learning", level: 90 },
-        { name: "Unsupervised Learning", level: 88 },
-        { name: "Linear Regression", level: 92 },
-        { name: "Logistic Regression", level: 90 },
-        { name: "Decision Trees", level: 88 },
-        { name: "Random Forest & XGBoost", level: 85 },
-      ],
-    },
-    {
-      icon: Code,
-      title: "Programming",
       color: "green",
       skills: [
-        { name: "Python", level: 95 },
-        { name: "SQL", level: 88 },
-        { name: "NumPy", level: 90 },
-        { name: "Pandas", level: 92 },
-        { name: "Scikit-learn", level: 88 },
-        { name: "NLTK", level: 80 },
-      ],
-    },
-    {
-      icon: Cpu,
-      title: "Analytics & Tools",
-      color: "purple",
-      skills: [
-        { name: "IBM SPSS Statistics", level: 85 },
-        { name: "Google Analytics 4", level: 88 },
-        { name: "A/B Experimentation", level: 80 },
-        { name: "K-means Clustering", level: 85 },
-        { name: "Hierarchical Clustering", level: 88 },
-        { name: "Microsoft Office Suite", level: 95 },
+        "Supervised Learning",
+        "Unsupervised Learning",
+        "XGBoost",
+        "Ensemble Models",
+        "Decision Trees",
+        "Random Forest",
+        "Linear Regression",
+        "Logistic Regression",
       ],
     },
     {
       icon: Database,
-      title: "Data Visualization",
-      color: "red",
+      title: "Data Analysis & Tools",
+      color: "purple",
       skills: [
-        { name: "Matplotlib", level: 88 },
-        { name: "Seaborn", level: 90 },
-        { name: "Tableau", level: 85 },
-        { name: "Data Preprocessing", level: 92 },
-        { name: "Report Preparation", level: 95 },
-        { name: "Presentation Skills", level: 90 },
-      ],
-    },
-    {
-      icon: Cloud,
-      title: "Process Modeling",
-      color: "teal",
-      skills: [
-        { name: "BPMN", level: 80 },
-        { name: "UML", level: 75 },
-        { name: "Business Process Analysis", level: 85 },
-        { name: "Requirements Gathering", level: 80 },
-        { name: "System Design", level: 75 },
-        { name: "Documentation", level: 88 },
+        "Pandas",
+        "NumPy",
+        "Scikit-learn",
+        "K-means Clustering",
+        "Hierarchical Clustering",
+        "NLTK",
+        "IBM SPSS Statistics",
+        "Google Analytics 4",
       ],
     },
     {
       icon: BarChart3,
+      title: "Data Visualization",
+      color: "red",
+      skills: [
+        "Matplotlib",
+        "Seaborn",
+        "Tableau",
+        "Data Preprocessing",
+        "Statistical Analysis",
+      ],
+    },
+    {
+      icon: Cloud,
+      title: "Technical Skills",
+      color: "teal",
+      skills: [
+        "API Integration",
+        "Web Scraping",
+        "Microsoft Office Suite",
+        "BPMN",
+        "Data Cleaning",
+        "Database Management",
+      ],
+    },
+    {
+      icon: Cpu,
       title: "Business Intelligence",
       color: "orange",
       skills: [
-        { name: "Customer Segmentation", level: 90 },
-        { name: "Financial Analysis", level: 85 },
-        { name: "Quality Assurance", level: 95 },
-        { name: "Data-driven Insights", level: 88 },
-        { name: "Stakeholder Reporting", level: 90 },
-        { name: "Web Scraping", level: 80 },
+        "Customer Segmentation",
+        "Financial Analysis",
+        "Quality Assurance",
+        "Stakeholder Reporting",
+        "Process Optimization",
+        "A/B Testing",
       ],
     },
   ];
@@ -96,18 +92,6 @@ const Skills = () => {
       colors[color as keyof typeof colors] ||
       "bg-primary-100 text-primary-600 border-primary-200"
     );
-  };
-
-  const getProgressColor = (color: string) => {
-    const colors = {
-      blue: "bg-primary-600",
-      green: "bg-green-600",
-      purple: "bg-purple-600",
-      red: "bg-red-600",
-      teal: "bg-teal-600",
-      orange: "bg-orange-600",
-    };
-    return colors[color as keyof typeof colors] || "bg-primary-600";
   };
 
   return (
@@ -144,26 +128,16 @@ const Skills = () => {
                   </h3>
                 </div>
 
-                <div className="space-y-4">
+                <div className="flex flex-wrap gap-2">
                   {category.skills.map((skill, skillIndex) => (
-                    <div key={skillIndex}>
-                      <div className="flex justify-between items-center mb-2">
-                        <span className="text-gray-900 font-medium">
-                          {skill.name}
-                        </span>
-                        <span className="text-primary-600 text-sm">
-                          {skill.level}%
-                        </span>
-                      </div>
-                      <div className="w-full bg-gray-200 rounded-full h-2">
-                        <div
-                          className={`h-2 rounded-full transition-all duration-1000 ease-out ${getProgressColor(
-                            category.color
-                          )}`}
-                          style={{ width: `${skill.level}%` }}
-                        ></div>
-                      </div>
-                    </div>
+                    <span
+                      key={skillIndex}
+                      className={`px-3 py-2 rounded-full text-sm font-medium ${getColorClasses(
+                        category.color
+                      )}`}
+                    >
+                      {skill}
+                    </span>
                   ))}
                 </div>
               </div>
