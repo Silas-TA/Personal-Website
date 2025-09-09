@@ -93,30 +93,6 @@ const Projects = () => {
       demo: "https://github.com/Silas-TA",
       status: "Completed",
     },
-    {
-      title: "Interactive Data Dashboard",
-      description:
-        "Comprehensive data visualization dashboard built with Tableau, featuring interactive charts and analytics to explore data insights and trends.",
-      image:
-        "https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=800",
-      technologies: [
-        "Tableau",
-        "Data Visualization",
-        "Business Intelligence",
-        "Analytics",
-        "Dashboard Design",
-      ],
-      features: [
-        "Interactive data visualizations",
-        "Real-time filtering and analysis",
-        "Professional dashboard design",
-        "Data storytelling and insights",
-        "Responsive visualization layout",
-      ],
-      tableauUrl: "https://public.tableau.com/shared/8X9WY4C82?:display_count=n&:origin=viz_share_link",
-      isTableau: true,
-      status: "Completed",
-    },
   ];
 
   return (
