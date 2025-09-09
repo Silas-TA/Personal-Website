@@ -212,35 +212,18 @@ const Projects = () => {
                   </div>
                 </div>
 
-                {project.isTableau ? (
-                  // Tableau Dashboard Embed
-                  <div className="space-y-4">
-                    <div className="bg-gray-100 rounded-lg p-4">
-                      <iframe
-                        src={`${project.tableauUrl.replace('?:display_count=n&:origin=viz_share_link', '?:showVizHome=no&:embed=true')}`}
-                        width="100%"
-                        height="400"
-                        frameBorder="0"
-                        scrolling="no"
-                        className="rounded-lg"
-                        title={project.title}
-                      ></iframe>
-                    </div>
-                    <div className="flex space-x-4">
-                      <a
-                        href={project.tableauUrl}
-                        className="flex items-center space-x-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200 text-sm font-medium"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <ExternalLink size={16} />
-                        <span>View Full Dashboard</span>
-                      </a>
-                    </div>
-                  </div>
-                ) : (
-                  // Regular Project Links
-                  <div className="flex space-x-4">
+                <div className="flex space-x-4">
+                  {project.isTableau ? (
+                    <a
+                      href={project.tableauUrl}
+                      className="flex items-center space-x-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200 text-sm font-medium"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <ExternalLink size={16} />
+                      <span>View Full Dashboard</span>
+                    </a>
+                  ) : (
                     <a
                       href={project.github}
                       className="flex items-center space-x-2 px-4 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors duration-200 text-sm font-medium"
@@ -250,8 +233,8 @@ const Projects = () => {
                       <Github size={16} />
                       <span>Code</span>
                     </a>
-                  </div>
-                )}
+                  )}
+                </div>
               </div>
             </div>
           ))}
