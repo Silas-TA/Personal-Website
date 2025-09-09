@@ -14,7 +14,7 @@ const Hero = () => {
               Silas Taiwo-Adeyemo
             </h1>
             <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-primary-200 font-bold px-2">
-              Data Scientist & ML Engineer
+              Data Scientist and Analyst
             </p>
           </div>
 
