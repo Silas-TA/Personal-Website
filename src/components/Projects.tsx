@@ -1,23 +1,24 @@
-import React from "react";
-import { Github, ExternalLink, Play } from "lucide-react";
+import { Github, ExternalLink } from "lucide-react";
 
 const Projects = () => {
   const projects = [
     {
       title: "Housing Price Prediction Model",
       description:
-        "Developed a housing price prediction model for a Kaggle challenge using XGBoost algorithm, achieving an impressive RMSE score of 0.14.",
+        "Comprehensive housing price prediction project using advanced regression techniques for a Kaggle competition. The project involved extensive data preprocessing, exploratory data analysis, feature engineering, and model optimization using XGBoost and other ensemble methods. The model achieved competitive performance through systematic hyperparameter tuning, cross-validation, and comprehensive evaluation metrics including RMSE. The project demonstrates proficiency in handling real-world datasets, identifying key price determinants, and building production-ready predictive models.",
       image:
         "https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=800",
-      technologies: ["Python", "XGBoost", "Pandas", "NumPy", "Scikit-learn"],
+      technologies: ["Python", "XGBoost", "Pandas", "NumPy", "Scikit-learn", "Regression Analysis", "Feature Engineering"],
       features: [
-        "RMSE score of 0.14 on Kaggle challenge",
-        "Hyperparameter tuning and model optimization",
-        "Comprehensive model evaluation and validation",
+        "Advanced regression techniques for price prediction",
+        "Comprehensive data preprocessing and feature engineering",
+        "XGBoost model optimization with hyperparameter tuning",
+        "Exploratory data analysis and feature importance analysis",
+        "Cross-validation and model evaluation with RMSE metrics",
+        "Production-ready predictive modeling pipeline",
       ],
-      github:
-        "https://github.com/Silas-TA/Housing-Price-Prediction-using-XGBoost",
-      demo: "https://github.com/Silas-TA/Housing-Price-Prediction-using-XGBoost",
+      github: "https://github.com/Silas-TA/House-Prices-Prediction",
+      demo: "https://github.com/Silas-TA/House-Prices-Prediction",
       status: "Completed",
     },
     {
@@ -189,27 +190,15 @@ const Projects = () => {
                 </div>
 
                 <div className="flex space-x-4">
-                  {project.isTableau ? (
-                    <a
-                      href={project.tableauUrl}
-                      className="flex items-center space-x-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200 text-sm font-medium"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <ExternalLink size={16} />
-                      <span>View Full Dashboard</span>
-                    </a>
-                  ) : (
-                    <a
-                      href={project.github}
-                      className="flex items-center space-x-2 px-4 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors duration-200 text-sm font-medium"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <Github size={16} />
-                      <span>Code</span>
-                    </a>
-                  )}
+                  <a
+                    href={project.github}
+                    className="flex items-center space-x-2 px-4 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors duration-200 text-sm font-medium"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Github size={16} />
+                    <span>Code</span>
+                  </a>
                 </div>
               </div>
             </div>
